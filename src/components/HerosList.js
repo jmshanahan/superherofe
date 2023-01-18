@@ -1,18 +1,25 @@
 import React from 'react';
-
+import { uid } from 'uid';
 import Hero from './Hero';
 import classes from './HerosList.module.css';
 
 const HeroList = (props) => {
+  // const { hero} = props;
+  // <ul className={classes['movies-list']}>
+
   return (
-    <ul className={classes['movies-list']}>
-      {props.movies.map((movie) => (
+    <ul >
+      {props.heros.map((hero) => (
         <Hero
-          key={movie.id}
-          title={movie.title}
-          releaseDate={movie.releaseDate}
-          openingText={movie.openingText}
-        />
+          key={uid()} 
+          name = {hero.name}
+          intelligence = {hero.powerstats.intelligence}
+          strength = {hero.powerstats.strength}
+          speed = {hero.powerstats.speed}
+          durability= {hero.powerstats.durability}
+          power = {hero.powerstats.power}
+          combat = {hero.powerstats.combat}
+          />
       ))}
     </ul>
   );

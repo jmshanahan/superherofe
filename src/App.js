@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
-
-import HerosList from './components/HerosList';
-import './App.css';
+import React, { useState, useEffect, useCallback } from "react";
+import _ from "lodash";
+import HerosList from "./components/HerosList";
+import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState([]);
+  const [heros, setHeros] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -12,22 +12,35 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://swapi.dev/api/films/');
+      const response = await fetch("https://jshanahan.biz/2");
       if (!response.ok) {
-        throw new Error('Something went wrong!');
+        throw new Error("Something went wrong!");
       }
 
       const data = await response.json();
-
-      const transformedMovies = data.results.map((movieData) => {
+      console.dir(data);
+      const transformedHeros = () => {
         return {
-          id: movieData.episode_id,
-          title: movieData.title,
-          openingText: movieData.opening_crawl,
-          releaseDate: movieData.release_date,
+          id: data.id,
+          name: data.name,
+          response: data.response,
+          powerstats:{
+            strength: data.powerstats.strength,
+            intelligence: data.powerstats.intelligence,
+            speed: data.powerstats.speed,
+            durability: data.powerstats.durability,
+            power: data.powerstats.power,
+            combat: data.powerstats.combat
+          }
         };
-      });
-      setMovies(transformedMovies);
+      };
+      console.log("test");
+
+      let heroList = [];
+      heroList.push(transformedHeros());
+ 
+      setHeros(heroList);
+
     } catch (error) {
       setError(error.message);
     }
@@ -38,10 +51,12 @@ function App() {
     fetchMoviesHandler();
   }, [fetchMoviesHandler]);
 
-  let content = <p>Found no movies.</p>;
 
-  if (movies.length > 0) {
-    content = <HerosList movies={movies} />;
+
+  let content = <p>Found no movies.</p>;
+  console.log(heros);
+  if (heros.length > 0) {
+    content = <HerosList heros={heros} />;
   }
 
   if (error) {
@@ -55,7 +70,7 @@ function App() {
   return (
     <React.Fragment>
       <section>
-        <button onClick={fetchMoviesHandler}>Fetch Movies</button>
+        <button onClick={fetchMoviesHandler}>Fetch Heros</button>
       </section>
       <section>{content}</section>
     </React.Fragment>

@@ -1,0 +1,16 @@
+.boxborder {
+    border-width: 4px;
+    border-color: black;
+}
+.statdisplay {
+    width: 100px
+}
+label:before { 
+    display: inline-block;
+    position: relative;
+    top:0.25em;
+    left:-2px; 
+    content:'';
+    width:25px;
+    height:25px;
+}
