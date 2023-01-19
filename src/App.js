@@ -68,10 +68,16 @@ function App() {
     content = <p>Loading...</p>;
   }
 
+  const onAddHeroHandler = (enteredHeroID) =>
+  {
+    console.log(`The entered Hero ID is ${enteredHeroID}`)
+
+  }
+
   return (
     <React.Fragment>
       <section>
-        <HeroSearch/>
+        <HeroSearch onAddHero={onAddHeroHandler}/>
         {/* <button onClick={fetchMoviesHandler}>Fetch Heros</button> */}
       </section>
       <section>{content}</section>

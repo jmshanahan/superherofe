@@ -13,6 +13,7 @@ const HeroSearch = (props) => {
     const id = enteredHeroID;
     console.log(`Hero id is ${id}`);
     setHeroID("");
+    props.onAddHero(id)
   };
   return (
     <form onSubmit={submitHandler}>
