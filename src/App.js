@@ -73,9 +73,15 @@ function App() {
     const newHero = await fetchMoviesHandler(enteredHeroID);
     console.log("Transformed heros y");
     console.log(newHero);
-    let test = [];
-    test.push(newHero);
-    setHeros(test);
+    // let test = [];
+    // test.push(newHero);
+    // setHeros(test);
+    setHeros((prevState)=>{
+      return[
+        ...prevState,
+        newHero
+      ]
+    })
   };
 
   return (
