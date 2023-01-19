@@ -13,12 +13,12 @@ const HeroList = (props) => {
         <Hero
           key={uid()} 
           name = {hero.name}
-          intelligence = {hero.powerstats.intelligence}
-          strength = {hero.powerstats.strength}
-          speed = {hero.powerstats.speed}
-          durability= {hero.powerstats.durability}
-          power = {hero.powerstats.power}
-          combat = {hero.powerstats.combat}
+          intelligence = {hero.intelligence}
+          strength = {hero.strength}
+          speed = {hero.speed}
+          durability= {hero.durability}
+          power = {hero.power}
+          combat = {hero.combat}
           />
       ))}
     </ul>
