@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import _ from "lodash";
 import HerosList from "./components/HerosList";
+import HeroSearch from "./components/HeroSearch";
 import "./App.css";
 
 function App() {
@@ -70,7 +71,8 @@ function App() {
   return (
     <React.Fragment>
       <section>
-        <button onClick={fetchMoviesHandler}>Fetch Heros</button>
+        <HeroSearch/>
+        {/* <button onClick={fetchMoviesHandler}>Fetch Heros</button> */}
       </section>
       <section>{content}</section>
     </React.Fragment>

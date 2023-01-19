@@ -8,7 +8,7 @@ section {
   border-radius: 12px;
 }
 
-button {
+ button {
   font: inherit;
   cursor: pointer;
   background: #230052;
@@ -26,4 +26,4 @@ button:hover,
 button:active {
   background-color: #460897;
   border-color: #460897;
-}
+} 
