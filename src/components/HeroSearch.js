@@ -5,13 +5,13 @@ const HeroSearch = (props) => {
   const [enteredHeroID, setHeroID] = useState("");
 
   const heroChangeHandler = (event) => {
+    console.log(event.target.value);
     setHeroID(event.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
     const id = enteredHeroID;
-    console.log(`Hero id is ${id}`);
     setHeroID("");
     props.onAddHero(id)
   };

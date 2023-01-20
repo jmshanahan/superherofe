@@ -24,4 +24,8 @@
   .new-expense__actions {
     text-align: right;
   }
+  .new-expense.invalid input {
+    border-color: red;
+    background: #fbdada;
+  }
 
