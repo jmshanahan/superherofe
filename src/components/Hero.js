@@ -4,12 +4,12 @@ import Statheader from './Statheader';
 import classes from './Hero.module.css';
 
 const Hero = (props) => {
-  const { name } = props;
+  const { name, imageurl } = props;
   console.log(props);
   console.log("The name is " + name);
   return (
     <li className={classes.movie}>
-      <Statheader name={name}/>
+      <Statheader name={name} imageurl={imageurl}/>
 
       <Statbox name="Intelligence" stat={props.intelligence}/>
       <Statbox name="Strength" stat={props.strength}/>

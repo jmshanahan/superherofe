@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
-import _ from "lodash";
+import React, { useState  } from "react";
 import HerosList from "./components/HerosList";
 import HeroSearch from "./components/HeroSearch";
 import "./App.css";
@@ -26,6 +25,7 @@ function App() {
         durability: data.powerstats.durability,
         power: data.powerstats.power,
         combat: data.powerstats.combat,
+        image: data.image.url
       };
       console.log("In Fetch Movie handler");
       console.log(transformedHeros);

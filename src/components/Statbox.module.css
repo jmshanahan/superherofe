@@ -31,7 +31,7 @@ label:before {
   .control label {
     font-weight: bold;
     flex: 1;
-    color: #464646;
+    color: white;
     margin-bottom: 0.5rem;
   }
   

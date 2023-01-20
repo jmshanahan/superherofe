@@ -1,4 +1,10 @@
 .statheader {
-    background-color: aqua;
+    padding: 5px;
 }
-
+.imagepos {
+    float: center;
+    max-height: 300px;
+}
+.imagetitle {
+    font-size: 25px;
+}
