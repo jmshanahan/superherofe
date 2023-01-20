@@ -19,7 +19,7 @@ const HeroSearch = (props) => {
     <form onSubmit={submitHandler}>
       <div className={classes['new-expense__controls']}>
         <div className={classes['new-expense__control']}>
-          <label>Enter Hero ID</label>
+          <label>Enter Hero ID (Number Between 1 and 731)</label>
           <input
             type="text"
             value={enteredHeroID}
