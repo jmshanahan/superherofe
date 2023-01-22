@@ -1,6 +1,7 @@
 import React, { useState  } from "react";
 import HerosList from "./components/HerosList";
 import HeroSearch from "./components/HeroSearch";
+import MainHeader from './components/MainHeader/MainHeader';
 import "./App.css";
 
 function App() {
@@ -86,6 +87,9 @@ function App() {
 
   return (
     <React.Fragment>
+      <section>
+      <MainHeader/>
+      </section>
       <section>
         <HeroSearch onAddHero={onAddHeroHandler} />
         {/* <button onClick={fetchMoviesHandler}>Fetch Heros</button> */}
