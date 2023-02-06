@@ -9,6 +9,7 @@ const HeroSearch = (props) => {
     setHeroID(event.target.value);
   };
 
+
   const submitHandler = (event) => {
     event.preventDefault();
     const id = enteredHeroID;
@@ -17,8 +18,8 @@ const HeroSearch = (props) => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <div className={classes['new-expense__controls']}>
-        <div className={classes['new-expense__control']}>
+      <div className={classes['new-hero__controls']}>
+        <div className={classes['new-hero__control']}>
           <label>Enter Hero ID (Number Between 1 and 731)</label>
           <input
             type="text"
@@ -26,10 +27,12 @@ const HeroSearch = (props) => {
             onChange={heroChangeHandler}
           />
         </div>
-      </div>
-      <div className={classes['new-expense__actions']}>
+        <div className={classes['new-hero__actions']}>
         <button type="submit">Add Hero</button>
       </div>
+
+      </div>
+
     </form>
   );
 };
