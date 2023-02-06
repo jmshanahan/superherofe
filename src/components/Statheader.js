@@ -7,7 +7,7 @@ const Statheader = (props) => {
   return (
     <div className={classes.statheader}>
        
-        <p> <label className={classes.imagetitle}>{name}</label></p>
+        <p  className={classes.imagetitle}>{name}</p>
       </div>
   );
 };

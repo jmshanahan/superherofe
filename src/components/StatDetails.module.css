@@ -1,10 +1,26 @@
-.stat-details__controls {
-    display: flex;
-    /* flex-wrap: wrap; */
-    gap: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
-    text-align: bottom;
-  }
+.table-control{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-control tbody{
+  display: block;
+}
   
- 
+.table-control td {
+  padding-bottom: 15px;
+}
+.table-control td:nth-child(odd){
+  width: 25%;
+
+}
+
+.table-control td:nth-child(even) {
+  color: bisque;
+  width: 10%;
+
+
+}
+

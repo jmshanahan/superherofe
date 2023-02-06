@@ -1,7 +1,8 @@
 .statimage {
     padding: 5px;
+   
 }
 .imagepos {
     float: left;
-    max-height: 20px;
+    max-height: 100px;
 }

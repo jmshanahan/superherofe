@@ -8,7 +8,7 @@ const HeroList = (props) => {
   // <ul className={classes['movies-list']}>
 
   return (
-    <ul >
+    <div >
       {props.heros.map((hero) => (
         <Hero
           key={uid()} 
@@ -22,7 +22,7 @@ const HeroList = (props) => {
           combat = {hero.combat}
           />
       ))}
-    </ul>
+    </div>
   );
 };
 

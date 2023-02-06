@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./StatDetails.module.css";
+import classes from "./StatImage.module.css";
 const StatImage = (props) => {
   const { imageurl, name } = props;
   return (

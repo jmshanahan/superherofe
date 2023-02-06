@@ -1,0 +1,9 @@
+.stat-headers__controls {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    text-align: bottom;
+  }
+  

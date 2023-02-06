@@ -1,16 +1,14 @@
 import React from "react";
-// import Statbox from './Statbox';
-import Statheader from "./Statheader";
 import classes from "./Hero.module.css";
 import StatDetails from "./StatDetails";
-
+import StatHeaderContainer from "./StatHeaderContainer";
 const Hero = (props) => {
   const { name, imageurl } = props;
   console.log(props);
   console.log("The name is " + name);
   return (
-    <li className={classes.movie}>
-      <Statheader name={name} imageurl={imageurl} />
+    <div className={classes.movie}>
+      <StatHeaderContainer name={name} imageurl={imageurl}/>
       <StatDetails
         name={name}
         imageurl={imageurl}
@@ -21,7 +19,7 @@ const Hero = (props) => {
         power={props.power}
         combat={props.combat}
       />
-    </li>
+    </div>
   );
 };
 

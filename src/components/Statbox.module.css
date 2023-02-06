@@ -3,7 +3,7 @@
     border-color: black;
 }
 .statdisplay {
-    width: 100px
+    width: 30px
 }
 label:before { 
     display: inline-block;
