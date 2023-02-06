@@ -1,10 +1,13 @@
 import React from 'react';
 import classes from './MainHeader.module.css';
-
+import logo from '../../assets/400PngdpiLogoCropped.png';
 const MainHeader = (props) => {
   return (
     <header className={classes['main-header']}>
-      <h1>Superhero</h1>
+      <div>
+      <img src={logo} alt="logo"/>
+
+      </div>
     </header>
   );
 };
